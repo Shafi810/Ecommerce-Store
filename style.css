@@ -1,0 +1,162 @@
+/* Navbar General Styles */
+.navbar-line {
+  padding: 10px 0;
+}
+
+.line-1 {
+  background-color: #f8f9fa; /* Light gray */
+}
+
+.line-2 {
+  background-color: #e9ecef; /* Slightly darker gray */
+}
+
+.line-3 {
+  background-color: #dee2e6; /* Even darker gray */
+}
+
+/* Scrolling Text */
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.scrolling-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 40s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Search Input */
+.search-input {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-input input {
+  padding-right: 40px;
+  width: 100%;
+}
+
+.search-input .fa-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6c757d;
+}
+
+/* Dropdown */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .scrolling-text {
+      display: none; /* Hide scrolling text on small screens */
+  }
+
+  .navbar-line {
+      padding: 5px 0; /* Reduce padding on small screens */
+  }
+
+  .search-input {
+      max-width: 100%; /* Full width for search bar on small screens */
+  }
+
+  .navbar-toggler {
+      border: none;
+      padding: 0.5rem;
+  }
+
+  .navbar-toggler i {
+      font-size: 1.5rem;
+  }
+
+  .navbar-collapse {
+      background-color: #f8f9fa; /* Light background for collapsed menu */
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+  }
+
+  .navbar-line .d-flex {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
+  }
+
+  .navbar-line .d-flex a {
+      margin-bottom: 10px; /* Add spacing between stacked items */
+  }
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Rating Stars */
+.raiting-star {
+  color: rgb(250, 203, 48);
+}
+
+/* Product Cards */
+.product {
+  max-width: 300px;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .scrolling-text {
+      display: none;
+  }
+
+  .search-input {
+      max-width: 100%;
+  }
+
+  .navbar-line {
+      padding: 5px 0;
+  }
+
+  .product {
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .line-3 .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+  }
+
+  .line-3 .d-flex {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .line-3 .d-flex a {
+      margin-bottom: 10px;
+  }
+}
